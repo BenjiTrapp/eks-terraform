@@ -1,3 +1,6 @@
+[![Checkov](https://github.com/BenjiTrapp/eks-terraform/actions/workflows/checkov.yml/badge.svg)](https://github.com/BenjiTrapp/eks-terraform/actions/workflows/checkov.yml)
+[![terraform-lint](https://github.com/BenjiTrapp/eks-terraform/actions/workflows/blank.yml/badge.svg)](https://github.com/BenjiTrapp/eks-terraform/actions/workflows/blank.yml)
+
 # eks-terraform
 
 Some Demo to play a little with Amazon EKS and k8s and here comes the obligatory disclaimer:
