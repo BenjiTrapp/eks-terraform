@@ -19,10 +19,12 @@ data "aws_availability_zones" "available" {
 }
 
 resource "aws_security_group" "worker_group_mgmt_one" {
+  #checkov:skip=CKV2_AWS_5:Ignored - ist so weil ist so
   name_prefix = "worker_group_mgmt_one"
   vpc_id      = module.vpc.vpc_id
-
+  description = "Allow Access to the worker group mgmt. one"
   ingress {
+    description = "Allow traffic on SSH"
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
@@ -34,10 +36,13 @@ resource "aws_security_group" "worker_group_mgmt_one" {
 }
 
 resource "aws_security_group" "all_worker_mgmt" {
+  #checkov:skip=CKV2_AWS_5:Ignored - ist so weil ist so
   name_prefix = "all_worker_management"
   vpc_id      = module.vpc.vpc_id
+  description = "Allow Access to the worker group mgmt. one via SSH"
 
   ingress {
+    description = "Allow traffic on SSH"
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
