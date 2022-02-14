@@ -31,7 +31,7 @@ yum install -y jq gzip nano tar git unzip wget
 
 aws configure
 
-Default region name: ap-southeast-2
+Default region name: eu-central-1
 Default output format: json
 ```
 
@@ -64,7 +64,7 @@ terraform apply
 
 ```
 # grab our EKS config
-aws eks update-kubeconfig --name getting-started-eks --region ap-southeast-2
+aws eks update-kubeconfig --name getting-started-eks --region eu-central-1
 
 # Get kubectl
 
@@ -98,7 +98,7 @@ docker run -it --rm -v ${PWD}:/work -w /work --entrypoint /bin/sh amazon/aws-cli
 
 cd ./kubernetes/cloud/amazon
 
-yum install jq gzip nano tar git
+yum install jq gzip vim tar git
 ```
 
 ### Login to AWS
@@ -218,8 +218,8 @@ chmod 400 ~/.ssh/id_rsa*
 
 
 eksctl create cluster --name getting-started-eks \
---region ap-southeast-2 \
---version 1.16 \
+--region eu-central-1 \
+--version 1.23 \
 --managed \
 --node-type t2.small \
 --nodes 1 \
